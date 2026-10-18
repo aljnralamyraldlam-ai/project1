@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>متجري الفاخر</title>
+
+  <style>
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background:
+        linear-gradient(rgb(2, 7, 23), rgba(0, 0, 0, 0)),
+        url("images/.jpg")
+        center / cover fixed;
+      text-align: center;
+    }
+
+    .language-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      padding: 18px;
+    }
+
+    .language-bar button {
+      border: 1px solid #d4af37;
+      background: #171717;
+      color: #d4af37;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .language-bar button.active {
+      background: #d4af37;
+      color: #111;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 550px;
+      margin: 25px auto;
+      padding: 30px 22px;
+      box-sizing: border-box;
+      border: 1px solid #100131;
+      border-radius: 18px;
+    background: 
+    linear-gradient(rgb(1, 7, 23 ), rgba(16, 11, 11, 0.1)),
+    url("images/f.jpg");
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow:0 25px 25px rgb();
+  
+    
+    }
+    
+    .logo {
+      font-size: 65px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #d4af37;
+      font-size: 30px;
+      margin: 10px 0;
+    }
+
+    .description {
+      color: #e3e0e0;
+      line-height: 1.9;
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
+
+    .products {
+      color: #e3e0e0;
+      line-height: 2.2;
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    .social-button {
+      display: block;
+      width: 100%;
+      margin: 13px 0;
+      padding: 15px;
+      border-radius: 10px;
+      border: 2px solid #e3e0e0;
+      background: #01051e;
+      color: #e3e0e0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .social-button:hover {
+      background: transparent;
+      color: #d7d6d3;
+    }
+
+    .telegram-button {
+      font-family: inherit;
+      
+    }
+
+    .footer {
+      color: #d1c8c8;
+      margin-top: 30px;
+      font-size: 15px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #03002d;
+      border: 1px solid #e3e0e0;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      padding: 25px;
+    }
+
+    .modal-content h2 {
+      color: #d4af37;
+    }
+
+    .close-button {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #777;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 25px 16px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+
+      .language-bar button {
+        padding: 9px 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="language-bar">
+    <button id="arBtn" class="active" onclick="changeLanguage('ar')">
+      🇸🇦 العربية
+    </button>
+
+    <button id="trBtn" onclick="changeLanguage('tr')">
+      🇹🇷 Türkçe
+    </button>
+  </div>
+
+  <main class="container">
+
+    <div class="logo">💎</div>
+
+    <h1 data-ar="متجري الفاخر"
+        data-tr="Lüks Mağazam">
+      متجري الفاخر
+    </h1>
+
+    <p class="description"
+       data-ar="أهلًا وسهلًا بكم في متجرنا، حيث الأصالة والفخامة."
+       data-tr="Mağazamıza hoş geldiniz. Kalite ve zarafet burada buluşuyor.">
+      أهلًا وسهلًا بكم في متجرنا، حيث الأصالة والفخامة.
+    </p>
+
+    <div class="products"
+         data-ar="مسابح • عقيق • كهرمان • خواتم • سلاسل"
+         data-tr="Tesbih • Akik • Kehribar • Yüzük • Zincir">
+      مسابح • عقيق • كهرمان • خواتم • سلاسل
+    </div>
+  
+    <a class="social-button"
+       href=""
+       target="_blank"
+       rel="noopener noreferrer"
+       data-ar="📸 تابعنا على إنستغرام"
+       data-tr="📸 Instagram'da Bizi Takip Edin">
+      📸 تابعنا على إنستغرام
+    </a>
+
+    <a class="social-button"
+       href=""
+       target="_blank"
+       rel="noopener noreferrer"
+       data-ar="🟢 تواصل معنا عبر واتساب"
+       data-tr="🟢 WhatsApp Üzerinden Bize Ulaşın">
+      🟢 تواصل معنا عبر واتساب
+    </a>
+
+    <button class="social-button telegram-button"
+            onclick="openTelegram()"
+            data-ar="✈️ خيارات التواصل عبر تيليجرام"
+            <img class="social-icon telegram-icon"
+     
+            data-tr="✈️ Telegram İletişim Seçenekleri">
+      ✈️ خيارات التواصل عبر تيليجرام
+    </button>
+ <a class="social-button"
+   href=""
+   target="_blank"
+   rel="noopener noreferrer"
+   data-ar="🌐 موقعنا"
+   data-tr="🌐 ">
+  🌐 موقعنا
+</a>
+
+    <div class="footer"
+         data-ar="نسعد بخدمتكم دائمًا 💛"
+         data-tr="Size hizmet vermekten mutluluk duyarız 💛">
+      نسعد بخدمتكم دائمًا 💛
+    </div>
+
+  </main>
+
+  <!-- نافذة خيارات تيليجرام -->
+  <div class="modal" id="telegramModal">
+    <div class="modal-content">
+
+      <h2 data-ar="تواصل معنا عبر تيليجرام"
+          data-tr="Telegram Üzerinden İletişim">
+        تواصل معنا عبر تيليجرام
+      </h2>
+
+      <p data-ar="اختر الحساب الذي تريد التواصل معه:"
+         data-tr="İletişim kurmak istediğiniz hesabı seçin:">
+        اختر الحساب الذي تريد التواصل معه:
+      </p>
+
+      <a class="social-button"
+         href=""
+         target="_blank"
+         rel="noopener noreferrer"
+         data-ar="الحساب الاول "
+         data-tr="Birinci Hesap">
+        الحساب الأول
+      </a>
+
+      <a class="social-button"
+         href=""
+         target="_blank"
+         rel="noopener noreferrer"
+         data-ar="الحساب الثاني"
+         data-tr="İkinci Hesap">
+        الحساب الثاني
+      </a>
+
+      <button class="close-button"
+              onclick="closeTelegram()"
+              data-ar="إغلاق"
+              data-tr="Kapat">
+        إغلاق
+      </button>
+
+    </div>
+  </div>
+
+  <script>
+    function changeLanguage(language) {
+      document.documentElement.lang = language;
+
+      // العربية من اليمين إلى اليسار، والتركية من اليسار إلى اليمين
+      document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+
+      document.querySelectorAll("[data-ar]").forEach(function(element) {
+        element.textContent = element.getAttribute("data-" + language);
+      });
+
+      document.getElementById("arBtn").classList.toggle(
+        "active",
+        language === "ar"
+      );
+
+      document.getElementById("trBtn").classList.toggle(
+        "active",
+        language === "tr"
+      );
+
+      document.title = language === "ar"
+        ? "متجري الفاخر"
+        : "Lüks Mağazam";
+
+      localStorage.setItem("shopLanguage", language);
+    }
+
+    function openTelegram() {
+      document.getElementById("telegramModal").style.display = "flex";
+    }
+
+    function closeTelegram() {
+      document.getElementById("telegramModal").style.display = "none";
+    }
+
+    // إغلاق النافذة عند الضغط خارجها
+    document.getElementById("telegramModal").addEventListener(
+      "click",
+      function(event) {
+        if (event.target === this) {
+          closeTelegram();
+        }
+      }
+    );
+
+    // استعادة اللغة التي اختارها الزائر سابقًا
+    const savedLanguage = localStorage.getItem("shopLanguage") || "ar";
+    changeLanguage(savedLanguage);
+  </script>
+
+</body>
+</html>
