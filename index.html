@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>متجري الفاخر</title>
 
   <style>
-    
     * {
       box-sizing: border-box;
     }
@@ -17,10 +15,7 @@
       min-height: 100vh;
       font-family: Arial, sans-serif;
       color: #fff;
-      background:
-        linear-gradient(rgb(2, 7, 23), rgba(0, 0, 0, 0)),
-        url("images/.jpg")
-        center / cover fixed;
+      background: #020717;
       text-align: center;
     }
 
@@ -51,19 +46,10 @@
       max-width: 550px;
       margin: 25px auto;
       padding: 30px 22px;
-      box-sizing: border-box;
       border: 1px solid #100131;
       border-radius: 18px;
-    background: 
-    linear-gradient(rgb(1, 7, 23 ), rgba(16, 11, 11, 0.1)),
-    url("images/f.jpg");
-    background-color: transparent;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow:0 25px 25px rgb();
-  
-    
+      background: #0d1222;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     }
     
     .logo {
@@ -108,13 +94,8 @@
     }
 
     .social-button:hover {
-      background: transparent;
-      color: #d7d6d3;
-    }
-
-    .telegram-button {
-      font-family: inherit;
-      
+      background: #d4af37;
+      color: #111;
     }
 
     .footer {
@@ -180,7 +161,6 @@
     <button id="arBtn" class="active" onclick="changeLanguage('ar')">
       🇸🇦 العربية
     </button>
-
     <button id="trBtn" onclick="changeLanguage('tr')">
       🇹🇷 Türkçe
     </button>
@@ -190,8 +170,7 @@
 
     <div class="logo">💎</div>
 
-    <h1 data-ar="متجري الفاخر"
-        data-tr="Lüks Mağazam">
+    <h1 data-ar="متجري الفاخر" data-tr="Lüks Mağazam">
       متجري الفاخر
     </h1>
 
@@ -206,45 +185,29 @@
          data-tr="Tesbih • Akik • Kehribar • Yüzük • Zincir">
       مسابح • عقيق • كهرمان • خواتم • سلاسل
     </div>
-  
-    <a class="social-button"
-       href=""
-       target="_blank"
-       rel="noopener noreferrer"
-       data-ar="📸 تابعنا على إنستغرام"
-       data-tr="📸 Instagram'da Bizi Takip Edin">
+
+    <a class="social-button" href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+       data-ar="📸 تابعنا على إنستغرام" data-tr="📸 Instagram'da Bizi Takip Edin">
       📸 تابعنا على إنستغرام
     </a>
 
-    <a class="social-button"
-       href=""
-       target="_blank"
-       rel="noopener noreferrer"
-       data-ar="🟢 تواصل معنا عبر واتساب"
-       data-tr="🟢 WhatsApp Üzerinden Bize Ulaşın">
+    <a class="social-button" href="https://wa.me/" target="_blank" rel="noopener noreferrer"
+       data-ar="🟢 تواصل معنا عبر واتساب" data-tr="🟢 WhatsApp Üzerinden Bize Ulaşın">
       🟢 تواصل معنا عبر واتساب
     </a>
 
-    <button class="social-button telegram-button"
-            onclick="openTelegram()"
-            data-ar="✈️ خيارات التواصل عبر تيليجرام"
-            <img class="social-icon telegram-icon"
-     
-            data-tr="✈️ Telegram İletişim Seçenekleri">
+    <button class="social-button" onclick="openTelegram()"
+            data-ar="✈️ خيارات التواصل عبر تيليجرام" data-tr="✈️ Telegram İletişim Seçenekleri">
       ✈️ خيارات التواصل عبر تيليجرام
     </button>
- <a class="social-button"
-   href=""
-   target="_blank"
-   rel="noopener noreferrer"
-   data-ar="🌐 موقعنا"
-   data-tr="🌐 ">
-  🌐 موقعنا
-</a>
+
+    <a class="social-button" href="#" target="_blank" rel="noopener noreferrer"
+       data-ar="🌐 موقعنا" data-tr="🌐 Konumumuz">
+      🌐 موقعنا
+    </a>
 
     <div class="footer"
-         data-ar="نسعد بخدمتكم دائمًا 💛"
-         data-tr="Size hizmet vermekten mutluluk duyarız 💛">
+         data-ar="نسعد بخدمتكم دائمًا 💛" data-tr="Size hizmet vermekten mutluluk duyarız 💛">
       نسعد بخدمتكم دائمًا 💛
     </div>
 
@@ -254,38 +217,25 @@
   <div class="modal" id="telegramModal">
     <div class="modal-content">
 
-      <h2 data-ar="تواصل معنا عبر تيليجرام"
-          data-tr="Telegram Üzerinden İletişim">
+      <h2 data-ar="تواصل معنا عبر تيليجرام" data-tr="Telegram Üzerinden İletişim">
         تواصل معنا عبر تيليجرام
       </h2>
 
-      <p data-ar="اختر الحساب الذي تريد التواصل معه:"
-         data-tr="İletişim kurmak istediğiniz hesabı seçin:">
+      <p data-ar="اختر الحساب الذي تريد التواصل معه:" data-tr="İletişim kurmak istediğiniz hesabı seçin:">
         اختر الحساب الذي تريد التواصل معه:
       </p>
 
-      <a class="social-button"
-         href=""
-         target="_blank"
-         rel="noopener noreferrer"
-         data-ar="الحساب الاول "
-         data-tr="Birinci Hesap">
+      <a class="social-button" href="https://t.me/" target="_blank" rel="noopener noreferrer"
+         data-ar="الحساب الأول" data-tr="Birinci Hesap">
         الحساب الأول
       </a>
 
-      <a class="social-button"
-         href=""
-         target="_blank"
-         rel="noopener noreferrer"
-         data-ar="الحساب الثاني"
-         data-tr="İkinci Hesap">
+      <a class="social-button" href="https://t.me/" target="_blank" rel="noopener noreferrer"
+         data-ar="الحساب الثاني" data-tr="İkinci Hesap">
         الحساب الثاني
       </a>
 
-      <button class="close-button"
-              onclick="closeTelegram()"
-              data-ar="إغلاق"
-              data-tr="Kapat">
+      <button class="close-button" onclick="closeTelegram()" data-ar="إغلاق" data-tr="Kapat">
         إغلاق
       </button>
 
@@ -295,28 +245,16 @@
   <script>
     function changeLanguage(language) {
       document.documentElement.lang = language;
-
-      // العربية من اليمين إلى اليسار، والتركية من اليسار إلى اليمين
       document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
 
       document.querySelectorAll("[data-ar]").forEach(function(element) {
         element.textContent = element.getAttribute("data-" + language);
       });
 
-      document.getElementById("arBtn").classList.toggle(
-        "active",
-        language === "ar"
-      );
+      document.getElementById("arBtn").classList.toggle("active", language === "ar");
+      document.getElementById("trBtn").classList.toggle("active", language === "tr");
 
-      document.getElementById("trBtn").classList.toggle(
-        "active",
-        language === "tr"
-      );
-
-      document.title = language === "ar"
-        ? "متجري الفاخر"
-        : "Lüks Mağazam";
-
+      document.title = language === "ar" ? "متجري الفاخر" : "Lüks Mağazam";
       localStorage.setItem("shopLanguage", language);
     }
 
@@ -328,17 +266,12 @@
       document.getElementById("telegramModal").style.display = "none";
     }
 
-    // إغلاق النافذة عند الضغط خارجها
-    document.getElementById("telegramModal").addEventListener(
-      "click",
-      function(event) {
-        if (event.target === this) {
-          closeTelegram();
-        }
+    document.getElementById("telegramModal").addEventListener("click", function(event) {
+      if (event.target === this) {
+        closeTelegram();
       }
-    );
+    });
 
-    // استعادة اللغة التي اختارها الزائر سابقًا
     const savedLanguage = localStorage.getItem("shopLanguage") || "ar";
     changeLanguage(savedLanguage);
   </script>
